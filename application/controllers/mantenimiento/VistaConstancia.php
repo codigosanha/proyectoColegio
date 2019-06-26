@@ -12,6 +12,7 @@ class VistaConstancia extends CI_Controller {
     $this->load->model("Carreras_model");
     $this->load->model("Graduados_model");
     $this->load->model("VistaConstancia_model");
+    $this->load->helper("conversion");
 	}
 
 	public function index()
