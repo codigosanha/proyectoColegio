@@ -19,7 +19,14 @@
     <link rel="stylesheet" href="<?php echo base_url();?>assets/template/dist/css/skins/_all-skins.min.css">
     <style>
         
-        @page { size: letter;  margin: 0mm;}
+
+        
+           @page
+           {
+            size: 8.5in 11.0in;
+            size: portrait;
+          }
+        
     </style>
 </head>
 <body class="hold-transition skin-purple sidebar-mini">
