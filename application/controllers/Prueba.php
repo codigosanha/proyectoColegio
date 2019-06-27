@@ -6,7 +6,7 @@ class Prueba extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->load->helper("conversion");
-		$this->load->helper("functions");
+
 	}
 
 	/**
@@ -26,6 +26,7 @@ class Prueba extends CI_Controller {
 	 */
 	public function index()
 	{
-		echo convertir(25);
+		$valor="13";
+		echo (int)$valor;
 	}
 }

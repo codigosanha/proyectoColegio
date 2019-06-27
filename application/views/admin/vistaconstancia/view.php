@@ -12,12 +12,12 @@
 <?php $meses = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];?>
 <?php $fechaArray = explode("-", $titulos->FechaGraduacion);?>
 <br>
-<p> <br> La infrascrita Directora  del Colegio La Esperanza Jalapa Guatemala, <strong>CERTIFICA:</strong> tener a la vista el <strong>Acta numero <?php echo convertir($titulos->Num_Acta);?> guión <?php echo convertir($titulos->Anio);?></strong>, folio número <?php echo convertir($titulos->NumeroFolio);?>, del Libro de Actas de Graduación número <?php echo convertir($titulos->LibroActaGrad);?> en donde consta que el/la alumno <strong><?php echo $titulos->nombre;?></strong>
-	 sostuvo su examen de graduación el <?php echo convertir($fechaArray[2]);?> de <?php echo convertir($meses[$fechaArray[1]]);?> de <?php echo convertir($fechaArray[0]);?> (<?php echo convertir($fechaArray[2]);?>)/<?php echo convertir($fechaArray[1]);?>/<?php echo convertir($fechaArray[0]);?>), habiéndosele conferido el Título de: <strong>
+<p> <br> La infrascrita Directora  del Colegio La Esperanza Jalapa Guatemala, <strong>CERTIFICA:</strong> tener a la vista el <strong>Acta número <?php echo convertir($titulos->Num_Acta);?> guión <?php echo convertir($titulos->Anio);?></strong> (<?php echo $titulos->Num_Acta."-".$titulos->Anio?>), folio número <strong><?php echo convertir($titulos->NumeroFolio);?></strong>, del Libro de Actas de Graduación número <?php echo convertir($titulos->LibroActaGrad);?>, en donde consta que el/la alumno <strong><?php echo $titulos->nombre;?></strong>,
+	 sostuvo su examen de graduación, <strong>el <?php echo convertir($fechaArray[2]);?> de <?php echo $meses[(int)$fechaArray[1]];?> de <?php echo convertir($fechaArray[0]);?> (<?php echo $fechaArray[2];?>/<?php echo $fechaArray[1];?>/<?php echo $fechaArray[0];?>)</strong>, habiéndosele conferido el Título de: <strong>
 		 <?php echo $titulos->carrera;?></strong>.
 	 <br>
 	 <br>
-	 Se extiende la presente certificación, en Jalapa, a <?php echo "el " . convertir(date("d")) . "cdias  del mes de" . $meses[date("m")] . " del año" . convertir(date("Y"));?>
+	 Se extiende la presente certificación, en Jalapa, a <?php echo convertir(date("d")) . " dias del mes de " . $meses[(int)date("m")] . " del año " . convertir(date("Y"));?>
 
   </p>
 	<br>
